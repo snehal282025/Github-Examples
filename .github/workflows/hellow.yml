@@ -1,0 +1,17 @@
+name: hello-world
+
+on:
+  pull-request:
+    branches: 
+        - main
+
+jobs: 
+  hello:
+    runs-on: ubuntu-latest
+    name: my-job
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+    steps:
+      - name: hello
+        run: echo "The time was ${{ steps.hello.outputs.greeting }}"
