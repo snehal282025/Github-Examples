@@ -27,6 +27,6 @@ jobs:
 
       - name: hello
         run: |
-          echo "${{inputs.data}}"
+          echo "${{ inputs.data }}" | base64 --decode > ./decoded_file.txt
           echo "${{inputs.greeting}}"
           cat ./decoded_file.txt
