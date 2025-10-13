@@ -27,6 +27,6 @@ jobs:
 
       - name: hello
         run: |
-          echo "{{inputs.data}}"
-          echo "{{inputs.greeting}}"
-          echo "{inputs.name}"
+          echo "${{inputs.data}}"
+          echo "${{inputs.greeting}}"
+          echo "${inputs.name}"
