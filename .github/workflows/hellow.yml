@@ -17,16 +17,17 @@ on:
         type: string
 
 
-jobs: 
-  hello:
+jobs:
+  greet:
     runs-on: ubuntu-latest
-    name: my-job
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: hello
+      - name: Decode File Content
         run: |
-          echo "${{ inputs.data }}" | base64 --decode > ./mydata
-          echo "${{inputs.greeting}}"
-          cat ./mydata
+          echo "${{ inputs.data }}" | base64 --decode > ./decoded_file.txt
+      - name: Display Greeting
+        run: |
+          echo "${{ inputs.greeting }}, ${{ inputs.name }}!"
+      - name: Display File Content
+        run: |
+          echo "Contents of the file:"
+          cat ./decoded_file.txt
