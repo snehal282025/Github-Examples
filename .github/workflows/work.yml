@@ -1,6 +1,5 @@
 name: Snehals workflow
-on:
-  workflow_dispatch:
+on: ['push']
 jobs:
   my:
     runs-on: ubuntu-latest
