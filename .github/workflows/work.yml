@@ -21,5 +21,5 @@ jobs:
     runs_on: ubuntu_latest
     needs: my_jobs
     steps:
-      -name: print it
-       run: echo "Testing"
+      - name: print it
+        run: echo "Hello from a self-hosted runner!"
