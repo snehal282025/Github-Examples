@@ -2,9 +2,9 @@ name: Snehals workflow
 on:
   workflow_dispatch:
 jobs:
-  my_jobs:
+  my:
     runs-on: ubuntu-latest
-    needs: your_jobs
+    needs: my1
     steps:
       - name: group logging
         run: |
@@ -12,7 +12,7 @@ jobs:
           echo "MSG 1"
           echo "::endgroup::"
 
-  your_jobs:
+  my1:
     runs_on: ubuntu_latest
     steps:
       - name: print it
