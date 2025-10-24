@@ -1,0 +1,18 @@
+name: "Snehals workflow"
+on : ['push']
+jobs:
+  my_jobs:
+    runs_on: ubuntu-latest
+    steps:
+      - name: "group logging"
+      run: |
+          echo "::group:: Mygroup Msg"
+          echo "MSG 1"
+          echo "MSG 2"
+          ehco "::endgroup::"
+      - name: "step 1"
+        run: |
+          echo "MY_VAL=hello" >> $GITHUB_ENV
+      - name : "step 2"
+        run: |
+          echo $MY_VAL
