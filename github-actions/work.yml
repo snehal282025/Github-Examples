@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: "group logging"
       run: |
-          echo "::group:: Mygroup Msg"
+          echo "::group:: Mygroup   Msg"
           echo "MSG 1"
           echo "MSG 2"
           ehco "::endgroup::"
