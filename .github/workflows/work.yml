@@ -17,3 +17,9 @@ jobs:
       - name: "step 2"
         run: |
           echo $MY_VAL
+  your_job:
+    runs_on: ubuntu_latest
+    needs: my_jobs
+    steps:
+      -name: print it
+       run: echo "Testing"
