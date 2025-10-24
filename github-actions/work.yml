@@ -1,5 +1,6 @@
 name: "Snehals workflow"
-on : [push]
+on: [push]
+  workflow_dispatch:
 jobs:
   my_jobs:
     runs_on: ubuntu-latest
