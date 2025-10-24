@@ -1,12 +1,12 @@
 name: "Snehals workflow"
-on: [push]
+on:
   workflow_dispatch:
 jobs:
   my_jobs:
     runs_on: ubuntu-latest
     steps:
       - name: "group logging"
-      run: |
+        run: |
           echo "::group:: Mygroup   Msg"
           echo "MSG 1"
           echo "MSG 2"
