@@ -4,24 +4,16 @@ on:
 jobs:
   my_jobs:
     runs-on: ubuntu-latest
+    needs: your_jobs
     steps:
       - name: group logging
         run: |
           echo "::group:: Myd group Msg"
           echo "MSG 1"
           echo "::endgroup::"
-  your_jobs:
-    needs: my_jobs
-    runs_on: ubuntu_latest
-    
-    steps:
-      - name: print it
-        run: echo "Hello from a self-hosted runner!"
 
-  her_job:
-    needs: [my_jobs, your_jobs]
+  your_jobs:
     runs_on: ubuntu_latest
-    
     steps:
       - name: print it
         run: echo "Hello from a self-hosted runner!"
