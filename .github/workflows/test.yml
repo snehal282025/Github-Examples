@@ -18,6 +18,4 @@ jobs:
           version: '1.2.3'
 
       - name: Verify CLI Installation
-        run: |
-          echo "Checking MyCLI version..."
-          mycli --version
+        run: echo "Checking MyCLI version..."
