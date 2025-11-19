@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-       - name: Install MyCLI
+      - name: Install MyCLI
         uses: ./.github/actions/my-cli-action
         with:
           version: '1.2.3'
